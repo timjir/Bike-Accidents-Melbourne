@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+
+    <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
+    <!-- JQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- Bootstrap core CSS -->
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    <link href="style.css" rel="stylesheet">
+    <title>Bicycle Accidents in Melbourne</title>
+</head>
+<body>
+<div style = "margin-top:10px;">
+    <div class="container">
+        <div class = "row" >
+            <div class = "col-md-12">
+                <h2>Bicycle Accidents and Infrastructure Investment in Melbourne</h2>
+                <p> By Tim Rickman</p>
+                <div>
+                    <a style = "width: 80px" class="btn btn-default btn-xs" href="CBD.html" role="button">Back</a>
+                    <a style = "width: 80px" class="btn btn-default btn-xs" href="detail.html" role="button">Next</a>
+                    <span style = "display:inline-block; width: 20px; text-align: center">1</span>
+                    <span style = "display:inline-block; width: 20px; text-align: center">2</span>
+                    <span style = "display:inline-block; width: 20px; text-align: center; text-decoration: underline"><b>3</b></span>
+                    <span style = "display:inline-block; width: 20px; text-align: center">4</span>
+                </div>
+                <div class = "col-md-12" style ="border-bottom: 1px black; border-bottom-style: solid; margin-top: 20px;">
+                </div>
+            </div>
+        </div>
+        <div class="row" style = "margin-top:30px;">
+
+            <div class = "col-md-9">
+                <h4 style = "margin-top:0px">La Trobe Street Bike Lane</h4>
+                <p>In mid 2013, the City of Melbourne completed a 'Copenhagen' style bike lane. The bike lane is physically separated from the road. Crash statistic data is sourced from the Vic Roads Crash Stats Data Extract while cyclists numbers are interpolated from the City of Melbourne Bicycle Plan 2016 - 2020 and the La Trobe Street Bicycle Lanes Post Implementation Assessment by the Future Melbourne (Transport) Committee.</p>
+                <p>From a purely data driven point of view the effectiveness of the infrastructure is difficult to gauge given a large increase in accident numbers after the bike lane was completed. Cyclist usage statistics are not well recorded although the data available suggests an increase between 200 - 300%.</p>
+            </div>
+            <div class = "col-md-3">
+                <div class="circular--landscape">
+                    <img src="images/latrobe.png" />
+                </div>
+            </div>
+        </div>
+        <div class = "row">
+            <div class = "col-md-6">
+                <div  id = "chartSeven">
+                </div>
+            </div>
+
+            <div class = "col-md-6">
+                <div  id = "chartEight">
+                </div>
+            </div>
+        </div>
+        <div class = "row">
+            <div class = "col-md-8">
+                <div class="row">
+                    <div class = "col-md-12">
+                        <div class="btn-group" role="group" aria-label="...">
+                            <button type="button" class="btn btn-default" style = "font-size:10px" onclick = "updateChart('ACCIDENT_TYPE_DESC')">Accident Type</button>
+                            <button type="button" class="btn btn-default" style = "font-size:10px"  onclick = "updateChart('DCA_DESC')">Cause of Accident</button>
+                            <button type="button" class="btn btn-default" style = "font-size:10px"  onclick = "updateChart('SEVERITY_DESC')">Severity</button>
+                            <button type="button" class="btn btn-default" style = "font-size:10px"  onclick = "updateChart('TRAFFIC_CONTROL_DESC')">Traffic Control</button>
+                            <button type="button" class="btn btn-default" style = "font-size:10px"  onclick = "updateChart('NO_OF_VEHICLES')">Number of Vehicles</button>
+                        </div>
+                        <div  id = "latrobeBarChart">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class = "col-md-4">
+                <div class = "row">
+                    <div class = "col-md-12">
+                        <div class = "latrobeMapDiv">
+                            <div id = "latrobeMap">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+</body>
+
+
+
+<script type="text/javascript" src="js/latrobe_map.js"></script>
+<script type="text/javascript" src="js/latrobeBarCharts.js"></script>
+<script type="text/javascript" src="js/latrobe_accidents_line_charts.js"></script>
+</html>

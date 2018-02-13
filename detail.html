@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+
+    <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
+    <!-- JQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- Bootstrap core CSS -->
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    <link href="style.css" rel="stylesheet">
+    <title>Bicycle Accidents in Melbourne</title>
+</head>
+<body>
+<div style = "margin-top:10px;">
+    <div class="container">
+        <div class = "row" >
+            <div class = "col-md-12">
+                <h2>Bicycle Accidents and Infrastructure Investment in Melbourne</h2>
+                <p> By Tim Rickman</p>
+                <div>
+                    <a style = "width: 80px" class="btn btn-default btn-xs" href="latrobe.html" role="button">Back</a>
+                    <span style = "display:inline-block; width: 80px;"></span>
+                    <span style = "display:inline-block; width: 20px; text-align: center">1</span>
+                    <span style = "display:inline-block; width: 20px; text-align: center">2</span>
+                    <span style = "display:inline-block; width: 20px; text-align: center">3</span>
+                    <span style = "display:inline-block; width: 20px; text-align: center; text-decoration: underline"><b>4</b></span>
+
+                </div>
+                <div class = "col-md-12" style ="border-bottom: 1px black; border-bottom-style: solid; margin-top: 20px;">
+                </div>
+            </div>
+        </div>
+        <div class="row" style = "margin-top:30px;">
+
+            <div class = "cold-md-12 detailMapDiv">
+                <div id = "detailMap">
+
+                </div>
+            </div>
+            <div class = "col-md-3">
+                <div class = "col-md-12" style = "margin-top:50px;">
+                    <h3 style = "margin-top:0px">Bicycle Accidents in Detail</h3>
+                    <p>While the overall trend for cycling accidents is heading in the right direction there are still a number of problem issues that need to be dealt with. Most accidents that are occurring in Melbourne involve collisions with other vehicles. Dooring incidents are worryingly high, perhaps it is time to introduce the <a href="http://www.executivestyle.com.au/how-the-dutch-reach-could-help-drivers-protect-cyclists-from-dooring-gtuh55">Dutch Reach</a> </p>
+                </div>
+
+            </div>
+            <div class = "col-md-9">
+                <div class = "row">
+                     <div class = "col-md-12" style = "margin-top:50px;">
+                        <div class = "btn-group" role="group" aria-label="...">
+                            <button type="button" class="btn btn-default" style = "font-size: 11px" onclick = "colorPoints('ACCIDENT_TYPE_DESC')">Accident Type</button>
+                            <button type="button" class="btn btn-default" style = "font-size: 11px" onclick = "colorPoints('DCA_DESC')">Cause of Accident</button>
+                            <button type="button" class="btn btn-default" style = "font-size: 11px" onclick = "colorPoints('SEVERITY_DESC')">Severity</button>
+                            <button type="button" class="btn btn-default" style = "font-size: 11px" onclick = "colorPoints('TRAFFIC_CONTROL_DESC')">Traffic Control</button>
+                            <button type="button" class="btn btn-default" style = "font-size: 11px" onclick = "colorPoints('NO_OF_VEHICLES')">Number of Vehicles</button>
+                            <button type="button" class="btn btn-default" style = "font-size: 11px" onclick = "colorPoints('NO_OF_VEHICLES')">Number of Vehicles</button>
+                            <button type="button" class="btn btn-default" style = "font-size: 11px" onclick = "colorPoints('LIGHT_CONDITION_DEC')">Light Condition</button>
+                        </div>
+                    </div>
+                    <div class = "col-md-12 detailBarChart">
+                        <div id = detailBarChart>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+</body>
+
+
+
+<script type="text/javascript" src="js/detail_map.js"></script>
+<script type="text/javascript" src="js/detailBarChart.js"></script>
+
+
+</html>

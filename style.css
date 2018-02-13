@@ -1,0 +1,152 @@
+
+body {
+    font-size: 12px;
+    font-family: sans-serif;
+}
+
+svg {
+    position: relative;
+}
+
+
+
+#map path {
+    fill: steelblue;
+    fill-opacity: .6;
+}
+
+#map, #detailMap path:hover {
+    fill: red;
+    fill-opacity: 1;
+}
+
+#detailBarChart {
+    min-height: 600px;
+}
+
+#map {
+    position: absolute;
+    min-height: 630px;
+    width: 95%;
+    background-color: #333;
+}
+
+#latrobeMap {
+    position: absolute;
+    min-height: 350px;
+    width: 90%;
+}
+
+.latrobeMapDiv {
+    min-height: 350px;
+    width: 100%;
+}
+
+div.tooltip {
+    position: absolute;
+    width: 150px;
+    height: 50px;
+    padding: 2px;
+    font-size: 10px;
+    background: lightgrey;
+    color: black;
+    border: 0px;
+    padding-left: 15px;
+    pointer-events: none;
+    border-radius: 8px;
+
+}
+
+#detailMap {
+	
+    min-height: 450px;
+    width: 95%;
+}
+
+.datailMapDiv {
+    min-height: 450px;
+    width: 100%;
+}
+
+
+.After {
+    fill:#1b9e77;
+}
+
+.Before {
+    fill:#d95f02
+}
+
+#chart {
+    height: 400px;
+    width: 50%;
+    font-size: 12px;
+}
+
+#latrobeBarChart {
+    height: 400px;
+    width: 555px;
+    font-size: 12px;
+}
+
+#chartEight, #chartSeven {
+    height: 270px;
+    width: 550px;
+    font-size: 12px;
+}
+
+#chartTwo {
+    height: 270px;
+    width: 550px;
+    font-size: 12px;
+}
+
+#chartThree, #chartFour, #chartSix {
+    height: 270px;
+    width: 550px;
+    font-size: 12px;
+}
+
+#chartThree, #chartFour, #chartSix .bar {
+    fill: steelblue;
+}
+
+.axis path,
+.axis line {
+    fill: none;
+    stroke: grey;
+    stroke-width: 1;
+    shape-rendering: crispEdges;
+
+}
+
+.circular--landscape {
+    display: inline-block;
+    position: relative;
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 50%;
+}
+
+.circular--landscape img {
+    width: auto;
+    height: 100%;
+    margin-left: -10px;
+}
+
+.circular--landscape-large {
+    display: inline-block;
+    position: relative;
+    width: 450px;
+    height: 450px;
+    overflow: hidden;
+    border-radius: 50%;
+}
+
+.circular--landscape-large img {
+    width: auto;
+    height: 100%;
+    margin-left: -80px;
+    margin-top: 0px;
+}
