@@ -34,7 +34,7 @@ d3.json("./data/accidents.geojson", function(error, accidents) {
         .enter().append("path");
 
     // whenever the map is views moved (reset) call the mapDraw function
-    detailMap.on("viewreset", detailMapDraw);
+    detailMap.on("moveend", detailMapDraw);
     detailMapDraw();
 
     // Reposition the SVG to cover the features.
