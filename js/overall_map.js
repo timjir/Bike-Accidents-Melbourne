@@ -52,7 +52,7 @@ d3.json("./data/accidents.geojson", function(error, accidents) {
             .style("top", topLeft[1] + "px");
 
         g.attr("transform", "translate(" + -topLeft[0] + "," + -topLeft[1] + ")");
-        conole.log("here");
+        console.log("here");
         feature.attr("d", path);
         feature.attr("pointer-events", "visible");
         feature.attr("date", function (d) {
