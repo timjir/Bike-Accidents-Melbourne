@@ -28,7 +28,7 @@ d3.json("./data/accidents.geojson", function(error, accidents) {
         .enter().append("path");
 
     // whenever the map is views moved (reset) call the mapDraw function
-    latrobeMap.on("viewreset", latrobeMapDraw);
+    latrobeMap.on("moveend", latrobeMapDraw);
     latrobeMapDraw();
 
     // Reposition the SVG to cover the features.
